@@ -19,7 +19,8 @@
             }
             else {
                 window.location.href = "invitation.html";
-                window.location.replace("invitation.html?name=" + name);
+                window.location.replace("invitation.html");
+                localStorage.setItem("name", name)
             }
         }
     </script>

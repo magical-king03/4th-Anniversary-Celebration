@@ -109,13 +109,13 @@
         </div>
     </div>
 
-    <div style="background-image: url(inv_bg.png);" class="d-md-none d-sm-block" id="content">
+    <div style="background-image: url(inv_bg.png);" class="d-md-none d-sm-block">
         <div style="position: relative; width: 100%;">
             <img src="top_img.png" width="100%" height="100%" alt="" style="position: relative;">
             <img src="logo.png" alt="" width="60" height="60" style="position: absolute; top: 0; left: 0; margin: 5px;">
         </div>
         <div class="p-3" style="font-size: 10px;">
-            <p style="color: #EFD071; font-family: Montserrat, sans-serif;">Dear <span id="invName"></span>,</p>
+            <p style="color: #EFD071; font-family: Montserrat, sans-serif;">Dear <span id="invNam"></span>,</p>
             <p class="text-white">
 
                 I hope this message finds you well. I am thrilled to extend a warm invitation to you and your
@@ -197,12 +197,10 @@
     </div> -->
 
     <script>
-        function getQueryParam(name) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(name);
-        }
-        var name = getQueryParam('name');
+        
+        var name = localStorage.getItem("name")
         document.getElementById("invName").innerHTML = name;
+        document.getElementById("invNam").innerHTML = name;
     </script>
 </body>
 
